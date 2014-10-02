@@ -29,7 +29,7 @@ The Apache Knox project uses Apache Maven for build and dependency management. W
     <parent>
         <groupId>org.apache.knox</groupId>
         <artifactId>gateway</artifactId>
-        <version>0.5.0</version>
+        <version>0.6.0-SNAPSHOT</version>
     </parent>
     <artifactId>gateway-provider-security-pseudo</artifactId>
 
@@ -85,6 +85,8 @@ The Apache Knox project uses Apache Maven for build and dependency management. W
     </project>
 
 #### Dependencies
+
+NOTE: the "version" element must match the version indicated in the pom.xml of the Knox project. Otherwise, building will fail.
 
 ##### gateway-provider-security-preauth
 This particular federation provider is going to extend the existing PreAuth module with the capability to accept the user.name request parameter as an assertion of the identity by a trusted party. Therefore, we will depend on the preauth module in order to leverage the facilities available in the base classes available there for things like ip address validation, etc.
@@ -379,7 +381,7 @@ Apache Knox Developers Guide: http://knox.apache.org/books/knox-0-4-0/dev-guide.
 
 Apache Knox Users Guide: http://knox.apache.org/books/knox-0-4-0/knox-0-4-0.html
 
-Github project for this article: https://github.com/lmccay/pseudo-fed-provider
+Github project for this article: https://github.com/lmccay/gateway-provider-security-pseudo
 
 ## Conclusion
 This article has illustrated a simplified example of implementing a federation provider for establishing the identity of a previous authentication event and propagating that into the request processing for Hadoop REST APIs inside of Apache Knox. 
