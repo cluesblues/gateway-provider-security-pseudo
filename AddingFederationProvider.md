@@ -381,7 +381,9 @@ We are now ready to use curl again to test the new federation provider and ensur
 
 ## More Resources
 Apache Knox Developers Guide: http://knox.apache.org/books/knox-0-4-0/dev-guide.html
+
 Apache Knox Users Guide: http://knox.apache.org/books/knox-0-4-0/knox-0-4-0.html
+
 Github project for this article: 
 
 ## Conclusion
