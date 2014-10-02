@@ -163,11 +163,6 @@ Ultimately, an Apache Knox topology manifests as a web application deployed with
       }
       
       @Override
-      public void initializeContribution(DeploymentContext context) {
-        super.initializeContribution(context);
-      }
-      
-      @Override
       public void contributeFilter(DeploymentContext context, Provider provider, Service service, 
           ResourceDescriptor resource, List<FilterParamDescriptor> params) {
         // blindly add all the provider params as filter init params
@@ -315,7 +310,7 @@ Now, our Pseudo federation provider is building with the gateway project but it 
         ...
     </dependencies>
     
-Note that this is basically the same definition that was added to the root level pom.xml minus the <version> element.
+Note that this is basically the same definition that was added to the root level pom.xml minus the "version" element.
 
 ### Build, Test and Deploy
 At this point, we should have an integrated custom component that can be described for use within the Apache Knox topology descriptor file and engaged in the authentication of incoming requests for resources of the protected Hadoop cluster.
