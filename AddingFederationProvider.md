@@ -384,7 +384,7 @@ Apache Knox Developers Guide: http://knox.apache.org/books/knox-0-4-0/dev-guide.
 
 Apache Knox Users Guide: http://knox.apache.org/books/knox-0-4-0/knox-0-4-0.html
 
-Github project for this article: 
+Github project for this article: https://github.com/lmccay/pseudo-fed-provider
 
 ## Conclusion
 This article has illustrated a simplified example of implementing a federation provider for establishing the identity of a previous authentication event and propagating that into the request processing for Hadoop REST APIs inside of Apache Knox. 
