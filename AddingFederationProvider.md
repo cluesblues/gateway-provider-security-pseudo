@@ -357,15 +357,15 @@ Once the server is up and running and you are able to authenticate with HTTP BAS
 
 Find the sandbox.xml file in the install/conf/topologies file and edit it to reflect your provider type, name and any provider specific parameters.
 
-        <provider>
-            <role>federation</role>
-            <name>PseudoProvider</name>
-            <enabled>true</enabled>
-            <param>
-                <name>filter-init-param-name</name>
-                <value>value</value>
-            </param>
-        </provider
+    <provider>
+       <role>federation</role>
+       <name>PseudoProvider</name>
+       <enabled>true</enabled>
+       <param>
+           <name>filter-init-param-name</name>
+           <value>value</value>
+       </param>
+    </provider
 
 Once your federation provider is configured, just save the topology descriptor. Apache Knox will notice that the file has changed and automatically redeploy that particular topology. Any provider params described in the provider element will be added to the PseudoAuthFederationFilter as servlet filter init params and can be used to configure aspects of the filter's behavior.
 

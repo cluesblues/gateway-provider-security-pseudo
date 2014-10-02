@@ -44,7 +44,10 @@
             <groupId>${gateway-group}</groupId>
             <artifactId>gateway-util-common</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>${gateway-group}</groupId>
+            <artifactId>gateway-provider-security-preauth</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.eclipse.jetty.orbit</groupId>
             <artifactId>javax.servlet</artifactId>
