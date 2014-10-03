@@ -1,5 +1,21 @@
+<!---
+   Licensed to the Apache Software Foundation (ASF) under one or more
+   contributor license agreements.  See the NOTICE file distributed with
+   this work for additional information regarding copyright ownership.
+   The ASF licenses this file to You under the Apache License, Version 2.0
+   (the "License"); you may not use this file except in compliance with
+   the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+--->
+
 # Adding a Federation Provider to Apache Knox
-===================
 
 ## Pseudo Federation Provider
 This article will walk through the process of adding a new provider for establishing the identity of a user. The simple example of the Pseudo authentication mechanism in Hadoop will be used to communicate the general ideas for extending the preauthenticated federation provider that is available out of the box in Apache Knox. This is not a provider that should be used in a production environment and has at least one major limitation. It will however illustrate the general programming model for adding preauthenticated federation providers.
