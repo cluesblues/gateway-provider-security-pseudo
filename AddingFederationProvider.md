@@ -406,4 +406,4 @@ The process to extend the preauthenticated federation provider is a quick and si
 
 The Knox community is a growing community that welcomes contributions from interested users in order to grow the capabilities to include truly useful and impactful features.
 
-NOTE: It is important to understand that the provider illustrated in this example has limitations that preclude it from being used in production. Most notably, it does not have any means to follow redirects due to the missing user.name parameter in the Location header. In order to do this we would need to add something like a cookie in order to be able to determine the user identity on the redirected request.
+NOTE: It is important to understand that the provider illustrated in this example has limitations that preclude it from being used in production. Most notably, it does not have any means to follow redirects due to the missing user.name parameter in the Location header. In order to do this, we would need to set a cookie to determine the user identity on the redirected request.
