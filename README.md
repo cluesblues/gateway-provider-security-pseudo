@@ -44,9 +44,5 @@ Once it is cloned, you will need to delete the git specific files that are added
     rm gateway-provider-security-pseudo/.git/refs/heads/master
     rm gateway-provider-security-pseudo/.git/refs/remotes/origin/HEAD
 
-You will also want to delete the markdown files for the same reason:
-
-    rm gateway-provider-security-pseudo/*.md
-
 Then follow the instructions in the article to tie the new module into the gateway project and release module pom.xml files.
 
