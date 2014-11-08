@@ -393,9 +393,9 @@ We are now ready to use curl again to test the new federation provider and ensur
     curl -ivk "https://localhost:8443/gateway/sandbox/webhdfs/v1/tmp?op=LISTSTATUS&user.name=guest"
 
 ## More Resources
-Apache Knox Developers Guide: http://knox.apache.org/books/knox-0-4-0/dev-guide.html
+Apache Knox Developers Guide: http://knox.apache.org/books/knox-0-5-0/dev-guide.html
 
-Apache Knox Users Guide: http://knox.apache.org/books/knox-0-4-0/knox-0-4-0.html
+Apache Knox Users Guide: http://knox.apache.org/books/knox-0-5-0/knox-0-5-0.html
 
 Github project for this article: https://github.com/lmccay/gateway-provider-security-pseudo
 
