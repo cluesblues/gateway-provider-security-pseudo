@@ -21,10 +21,11 @@ Companion project for blog on adding a simple federation provider to Apache Knox
 
 [Article](AddingFederationProvider.md)
 
-You may clone this project into your project for Apache Knox at the root level and it will add the module.
-Once it is cloned, you will need to delete the git specific files that are added so that the build doesn't choke on the fact that they are missing apache license headers.
+Clone or fork this project and build it with:
 
-    rm -rf gateway-provider-security-pseudo/.git/
+mvn clean install
 
-Then follow the instructions in the article to tie the new module into the gateway project and release module pom.xml files.
+You can then add it to the a Knox deployment by adding the resulting jar file to the {GATEWAY_HOME}/ext directory.
+It will be picked by being on the classpath and discovered using the ServiceLoader API for finding certain interface implementations.
+
 
