@@ -39,55 +39,65 @@ This article will discuss what is involved in adding a new federation provider t
 ### The module and dependencies
 The Apache Knox project uses Apache Maven for build and dependency management. We will need to create a new module for the Pseudo federation provider and include our own pom.xml.
 
-    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.apache.knox</groupId>
-        <artifactId>gateway</artifactId>
-        <version>0.6.0-SNAPSHOT</version>
-    </parent>
+
+    <groupId>net.minder</groupId>
     <artifactId>gateway-provider-security-pseudo</artifactId>
+    <version>0.0.1</version>
 
-    <name>gateway-provider-security-pseudo</name>
-    <description>An extension of the gateway introducing support for user.name request parameters.</description>
+    <repositories>
+        <repository>
+            <id>apache.releases</id>
+            <url>https://repository.apache.org/content/repositories/releases/</url>
+        </repository>
+    </repositories>
 
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.knox</groupId>
+                <artifactId>gateway-spi</artifactId>
+                <version>0.5.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.knox</groupId>
-            <artifactId>gateway-provider-security-preauth</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.knox</groupId>
             <artifactId>gateway-spi</artifactId>
+            <version>0.5.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.knox</groupId>
             <artifactId>gateway-util-common</artifactId>
+            <version>0.5.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.knox</groupId>
+            <artifactId>gateway-provider-security-preauth</artifactId>
+            <version>0.5.0</version>
+        </dependency>
         <dependency>
             <groupId>org.eclipse.jetty.orbit</groupId>
             <artifactId>javax.servlet</artifactId>
+            <version>3.0.0.v201112011016</version>
         </dependency>
 
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <version>4.11</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.easymock</groupId>
             <artifactId>easymock</artifactId>
+            <version>3.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -95,10 +105,11 @@ The Apache Knox project uses Apache Maven for build and dependency management. W
             <groupId>org.apache.knox</groupId>
             <artifactId>gateway-test-utils</artifactId>
             <scope>test</scope>
+            <version>0.5.0</version>
         </dependency>
-
     </dependencies>
-    </project>
+
+</project>
 
 #### Dependencies
 
